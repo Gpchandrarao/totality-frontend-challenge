@@ -3,7 +3,7 @@ import "../styles/Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
-const Register = () => {
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showError, setShowError] = useState(false);
@@ -27,7 +27,7 @@ const Register = () => {
 
   const onsubmitForm = async (e) => {
     e.preventDefault();
-    const url = "https://totality-backend-fumd.onrender.com/user/register";
+    const url = "https://totality-backend-fumd.onrender.com/user/login";
     try {
       const userDetails = { username, password };
 
@@ -42,7 +42,7 @@ const Register = () => {
       const data = await res.json();
       if (res.ok) {
         setShowError(false);
-        navigate("/login");
+        navigate("/Home");
       } else {
         setError(data.error);
         setShowError(true);
@@ -53,12 +53,9 @@ const Register = () => {
     }
   };
   return (
-    <div className="register-container">
-      <div className="img-container">
-        <h1>Resorts Rooms</h1>
-      </div>
+    <div className="login-container">
       <form className="form-container" onSubmit={onsubmitForm}>
-        <h1>Register</h1>
+        <h1>Login</h1>
         <label htmlFor="username" className="label">
           URUERNAME
         </label>
@@ -87,9 +84,9 @@ const Register = () => {
         <button type="submit" className="register-btn">
           Register
         </button>
-        <Link to="/login" className="link ">
+        <Link to="/" className="link ">
           <button type="submit" className="register-btn craete-account">
-            have a account
+            Create a account
           </button>
         </Link>
         {showError && <p className="error">*{error}</p>}
@@ -98,4 +95,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;
