@@ -20,7 +20,7 @@ const Register = () => {
 
   // useEffect(() => {
   //   const jwtToken = Cookies.get("jwt_token");
-  //   if (jwtToken === undefined) {
+  //   if (jwtToken !== undefined) {
   //     return navigate("/");
   //   }
   // }, []);
@@ -42,7 +42,7 @@ const Register = () => {
       const data = await res.json();
       if (res.ok) {
         setShowError(false);
-        navigate("/");
+        navigate("/Home");
       } else {
         setError(data.error);
         setShowError(true);
