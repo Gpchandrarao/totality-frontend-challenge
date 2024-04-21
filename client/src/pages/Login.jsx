@@ -82,7 +82,7 @@ const Login = () => {
           onChange={onchangePassword}
         />
         <button type="submit" className="register-btn">
-          Register
+          Login
         </button>
         <Link to="/" className="link ">
           <button type="submit" className="register-btn craete-account">
