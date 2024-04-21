@@ -92,3 +92,19 @@
   color: red;
   font-weight: 800;
 }
+
+@media screen and (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img-container {
+    height: 40vh;
+    /* margin-top: 20px; */
+    width: 100%;
+  }
+  .form-container {
+    width: 90%;
+    margin: 0 0 30px 0;
+  }
+}

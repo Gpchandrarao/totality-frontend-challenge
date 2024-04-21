@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/Register.css";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
@@ -85,7 +85,7 @@ const Register = () => {
           onChange={onchangePassword}
         />
         <button type="submit" className="register-btn">
-          Regiset
+          Register
         </button>
         {showError && <p className="error">*{error}</p>}
       </form>
