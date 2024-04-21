@@ -4,6 +4,7 @@
 
 .nav-items-container {
   display: flex;
+  align-items: center;
   gap: 20%;
   padding: 2% 9%;
   /* background-color: red; */
@@ -34,4 +35,14 @@
 
 .nav-heading-items h1:hover {
   opacity: 0.7;
+}
+
+@media screen and (max-width: 490px) {
+  .nav-heading-items {
+    gap: 10%;
+    padding: auto;
+  }
+  .nav-heading-items h1 {
+    font-size: 20px;
+  }
 }
